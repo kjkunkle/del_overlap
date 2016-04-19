@@ -17,4 +17,4 @@ The code can easily be modified to support other file formats such as .psl and .
 - minimum deletion length
 - file names (at least 2 files are required)
 
-Expected input: python <program_name>.py <% overlap> <min del length> <fileYB1> <fileYB2> ... <fileYB8>
+Expected input: "python <program_name>.py <% overlap> <min del length> <fileYB1> <fileYB2> ... <fileYB8>"

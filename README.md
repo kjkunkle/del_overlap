@@ -1,4 +1,6 @@
-# del_overlap
+# Deletion Overlap Fingerprint Utility
+
+# Goals:
 
 The goals of this workflow are to use reference genome deletions in order to make inferences about genome similarity and lineage.
 This work is part of my undergraduate research under Professor Volker Brendel at Indiana University.
@@ -11,7 +13,7 @@ Huang's workflow is availible at: https://github.com/huangc/WGvarINDEL
 
 The code can easily be modified to support other file formats such as .psl and .bed, if you are interested in finding overlaps of features. 
 
-# Requirements
+# Requirements:
 This code is fairly computationally cheap due to the O(logN) efficiency of interval tree comparisons.
 Therefore, you should be able to run this on a local machine with a few GB of RAM.
 
@@ -22,7 +24,7 @@ The non-standard libraries you must possess to run this code are:
 - intervaltree
 - xlwt
 
-# Input parameters:
+# Input Parameters:
 There are several input parameters availible to change at the top of the python code.
 Python Input:
 - Number of chromosomes on the genome
@@ -42,6 +44,14 @@ There are two significant outputs of this file:
 - The printed outputs to stdout, which you should probably pipe into a .txt file as shown above.
     - This file contains every overlap found during the search
 - A .xls file made using the .xlwt file. 
-    - This file contains a few sheets: Sheet 1 contains all overlaps found for each of the top N deletions. Sheet 2 contains the total percentage of nucleotide bases that overlap between each cultivar input. Sheet 3 contains the counts of overlaps that meet or exceed the overlap threshold set in the Python parameters between each cultivar input. 
+    - This .xls file is created in the same directory that the Python code is executed in.
+    - This .xls file contains a few sheets: Sheet 1 contains all overlaps found for each of the top N deletions. Sheet 2 contains the total percentage of nucleotide bases that overlap between each cultivar input. Sheet 3 contains the counts of overlaps that meet or exceed the overlap threshold set in the Python parameters between each cultivar input. 
 
-
+# Notes:
+Currently, there is not a functionality to name each output file by the inputted files.
+For now, the output is YBX depending on the order of inputted files.
+- eg. "python program_name.py file1 file2" produces YB1 and YB2 as the names for file1 and fil2 respectively.
+# Future Plans:
+- Implement a data analytics Python program using the Python libary pandas.
+- Implement useful graphs using the matplotlib and scipy Python libraries
+- Add different options for output other than .xls such as .csv and tab-delimited .txt

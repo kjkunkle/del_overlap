@@ -51,6 +51,7 @@ There are two significant outputs of this file:
 Currently, there is not a functionality to name each output file by the inputted files.
 For now, the output is YBX depending on the order of inputted files.
 - eg. "python program_name.py file1 file2" produces YB1 and YB2 as the names for file1 and fil2 respectively.
+
 # Future Plans:
 - Implement a data analytics Python program using the Python libary pandas.
 - Implement useful graphs using the matplotlib and scipy Python libraries
